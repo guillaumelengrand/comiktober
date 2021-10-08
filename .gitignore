@@ -33,6 +33,7 @@ yarn-error.log*
 # Data
 /public/uploads
 /public/avatars
+/public/public.rar
 
 # vercel
 .vercel
