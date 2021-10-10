@@ -32,12 +32,12 @@ export default function Home({days, entries}) {
     return (
         <div>
             <Head>
-                <title>Comiktober - Submissions</title>
+                <title>Cominktober - Submissions</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
             <main className="m-4">
-                <h1 className="text-2xl font-bold">Comiktober - Submissions</h1>
+                <h1 className="text-2xl font-bold">Cominktober - Submissions</h1>
                 {days &&
                     days.map(day => {
                         return dayComponent(day, entries[day.accro]);
