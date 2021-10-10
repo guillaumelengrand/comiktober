@@ -14,7 +14,7 @@ export default function ImageZoom({src, alt, isWinner}) {
             <img className={`max-h-96 ${winnerCss}`} src={src} alt={alt} onClick={onClick} />
 
             {isZoom && (
-                <div className="fixed top-0 left-0 w-screen max-h-screen bg-black bg-opacity-50" onClick={onClick}>
+                <div className="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50" onClick={onClick}>
                     <div className="flex flex-row justify-center">
                         <img className="max-h-screen py-4" src={src} alt={alt} />
                     </div>
