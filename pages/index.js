@@ -19,11 +19,17 @@ export default function Home({days, entries}) {
                                 src={`/avatars/${entry.user_name}.png`}
                                 alt={`${entry.user_name}`}
                             />
-                            <ImageZoom
-                                src={`${entry.url}`}
-                                alt={`${entry.user_name}_${entry.day}`}
-                                isWinner={entry.is_winner}
-                            />
+                            {entry.url ? (
+                                <ImageZoom
+                                    src={`${entry.url}`}
+                                    alt={`${entry.user_name}_${entry.day}`}
+                                    isWinner={entry.is_winner}
+                                />
+                            ) : (
+                                <div className="flex flex-col justify-center">
+                                    <img className="w-64 h-52" src="/placeholder-image.png" alt="empty_picture" />
+                                </div>
+                            )}
                         </div>
                     ))}
             </div>
