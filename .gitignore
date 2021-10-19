@@ -34,6 +34,7 @@ yarn-error.log*
 /public/uploads
 /public/avatars
 /public/public.rar
+/uploads/*
 
 # vercel
 .vercel
