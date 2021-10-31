@@ -1,4 +1,4 @@
-import {getEntries, getEntriesByDay, getEntryDays} from '../dao/entry';
+import {getEntries, getEntriesByDay, getEntriesTimeline, getEntryDays, getTimelineWithDay} from '../dao/entry';
 
 export async function getAllEntry() {
     const entries = await getEntries();
@@ -14,4 +14,10 @@ export async function getEntriesFormatByDay() {
     }
 
     return formatEntries;
+}
+
+export async function getTimeline() {
+    //var timeline = await getEntriesTimeline();
+    var timeline = await getTimelineWithDay();
+    return timeline;
 }

@@ -28,3 +28,24 @@ export async function getEntriesByDay(day) {
     );
     return JSON.parse(JSON.stringify(results));
 }
+
+export async function getEntriesTimeline() {
+    const results = await query(
+        `
+        SELECT * FROM entries
+        WHERE timeline = 1
+        `,
+    );
+    return JSON.parse(JSON.stringify(results));
+}
+
+export async function getTimelineWithDay() {
+    const results = await query(
+        `select * from entries
+        inner join days
+        on entries.day = days.accro
+        where entries.timeline = 1;`,
+    );
+
+    return JSON.parse(JSON.stringify(results));
+}

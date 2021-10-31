@@ -4,16 +4,16 @@ import Header from '../components/header';
 import ImageZoom from '../components/image-zoom';
 import {getTimeline} from '../model/entry';
 
-export default function Index({timeline}) {
+export default function Final({timeline}) {
     const dayComponent = entryDay => (
-        <div className="pb-2 mx-1 my-4 bg-white rounded" key={entryDay.id}>
+        <div className="pb-2 my-4 bg-white rounded" key={entryDay.id}>
             <h2 className="m-2 text-xl capitalize">
                 {entryDay.name} - {entryDay.theme}
             </h2>
             <div className="flex flex-row justify-center">
                 <div className="flex flex-row px-2">
                     <img
-                        className="h-10 pr-1 rounded-full"
+                        className="h-10 rounded-full"
                         src={`/avatars/${entryDay.user_name}.png`}
                         alt={`${entryDay.user_name}`}
                     />
@@ -41,7 +41,7 @@ export default function Index({timeline}) {
 
             <Header />
 
-            <main className="flex flex-wrap justify-center mx-4 mb-4">
+            <main className="mx-4 mb-4">
                 {timeline &&
                     timeline.map(entryDay => {
                         return dayComponent(entryDay);
